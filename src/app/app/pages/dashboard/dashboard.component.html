@@ -1,1 +1,83 @@
-<p>dashboard works!</p>
+<div class="flex min-h-screen bg-gray-800">
+  <nav class="bg-gray-800 p-4 w-64 flex flex-col space-y-4 fixed h-128 z-50 mt-16">
+
+    <a (click)="scrollTo('about')" class="text-gray-300 hover:text-white cursor-pointer">
+      Sobre Nosotros
+    </a>
+    <a (click)="scrollTo('secure-company')" class="text-gray-300 hover:text-white cursor-pointer">
+Tenlo por seguro    </a>
+    <a (click)="scrollTo('tourism')" class="text-gray-300 hover:text-white cursor-pointer">
+      Turismo
+    </a>
+    <a (click)="scrollTo('tools')" class="text-gray-300 hover:text-white cursor-pointer">
+      Herramientas
+    </a>
+
+  </nav>
+
+  <div class="ml-64 flex-1 ">
+    <section id="about" class="h-screen flex items-center justify-center bg-gray-500 text-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Quiénes Somos?</h2>
+            <p class="text-white mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus est eu urna
+              efficitur, at viverra neque vehicula.
+            </p>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img src="ruta-a-tu-imagen.jpg" alt="Imagen de quienes somos" class="rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="secure-company" class="h-screen flex items-center justify-center bg-gray-600 text-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 flex justify-center">
+            <img src="ruta-a-otra-imagen.jpg" alt="Imagen de empresa segura" class="rounded-lg shadow-lg" />
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Empresa Segura</h2>
+            <p class="text-white mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor neque eu tortor
+              aliquam feugiat. Nullam scelerisque libero a efficitur accumsan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tourism" class="h-screen flex items-center justify-center bg-gray-500 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Turismo en México</h2>
+        <p class="text-white mb-4">
+          Aparte de envíos, explora las maravillas turísticas que México tiene para ofrecer.
+        </p>
+      </div>
+    </section>
+
+    <section id="tools" class="h-screen flex items-center justify-center bg-gray-600 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Herramientas</h2>
+        <p class="text-white mb-4">
+          Utiliza nuestras herramientas para calcular envíos y rastrear tus pedidos.
+        </p>
+      </div>
+    </section>
+
+    <section id="auth" class="h-screen flex items-center justify-center bg-gray-500 text-white" *ngIf="!isAuthenticated">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Crea una cuenta o Inicia Sesión</h2>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" (click)="navigateTo('/register')">
+          Crear Cuenta
+        </button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 ml-4" (click)="navigateTo('/login')">
+          Iniciar Sesión
+        </button>
+      </div>
+    </section>
+  </div>
+</div>

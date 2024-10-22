@@ -1,1 +1,87 @@
-<p>calculate-shipping works!</p>
+
+<div>
+  <div class="bg-gray-800 p-8">
+    <h2 class="text-white text-2xl font-bold mb-4">CALCULE EL COSTO DE SU ENVÍO</h2>
+    <p class="text-gray-300 mb-6">
+      Solo indique los detalles de su paquete y obtenga una cotización para checar todos los servicios que ofrecemos y los de otras empresas de mensajería.
+    </p>
+
+    <form class="grid grid-cols-2 gap-6">
+      <!-- País Origen -->
+      <div class="col-span-1">
+        <label class="text-white">País Origen</label>
+        <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+          <option>Select Country</option>
+        </select>
+      </div>
+
+      <!-- Estado Origen -->
+      <div class="col-span-1">
+        <label class="text-white">Estado Origen</label>
+        <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+          <option>Seleccione el Estado</option>
+        </select>
+      </div>
+
+      <!-- País Destino -->
+      <div class="col-span-1">
+        <label class="text-white">País Destino</label>
+        <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+          <option>Select Country</option>
+        </select>
+      </div>
+
+      <!-- Estado Destino -->
+      <div class="col-span-1">
+        <label class="text-white">Estado Destino</label>
+        <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+          <option>Seleccione el Estado</option>
+        </select>
+      </div>
+
+      <!-- Dimensiones -->
+      <div class="col-span-2 flex gap-4">
+        <div class="flex-1">
+          <label class="text-white">¿Qué tan grande?</label>
+          <input type="text" placeholder="Largo" class="w-full mt-2 p-2 border border-gray-300 rounded">
+        </div>
+        <div class="flex-1">
+          <label class="invisible">Ancho</label>
+          <input type="text" placeholder="Ancho" class="w-full mt-2 p-2 border border-gray-300 rounded">
+        </div>
+        <div class="flex-1">
+          <label class="invisible">Alto</label>
+          <input type="text" placeholder="Alto" class="w-full mt-2 p-2 border border-gray-300 rounded">
+        </div>
+        <div class="flex-1">
+          <label class="invisible">Cm</label>
+          <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+            <option>Cm</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Peso -->
+      <div class="col-span-2 flex gap-4">
+        <div class="flex-1">
+          <label class="text-white">¿Qué tan pesado?</label>
+          <input type="text" placeholder="Peso" class="w-full mt-2 p-2 border border-gray-300 rounded">
+        </div>
+        <div class="flex-1">
+          <label class="invisible">kg</label>
+          <select class="w-full mt-2 p-2 border border-gray-300 rounded">
+            <option>kg</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="col-span-2">
+        <button type="submit" class="bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600">
+          Calcular Costo de Envío
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
